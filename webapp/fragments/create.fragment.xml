@@ -1,0 +1,37 @@
+
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+   <Dialog id="idDialog" title="CreateOpetation">
+<VBox id="idVBox" class="sapUiMediumMargin">
+<Label id="idlabel" text="ID"></Label>
+<Input id="idInput" value="{}"/>
+<Label id="idlabel1" text="Name"/>
+<Input id="idInput1" value=""></Input>
+<Label id="idlabel2" text="Description"></Label>
+<Input id="idInput2" value="{}"/>
+<Label id="idlabel3" text="ReleaseDate"/>
+<DatePicker id="idInput3" value="" />
+<Label id="idlabel4" text="Rating"></Label>
+<Input id="idInput4" value="{}"/>
+<Label id="idlabel5" text="DiscontinuedDate"/>
+<DatePicker  id="idInput5" value=""/>
+<Label id="idlabel6" text="Price"></Label>
+<Input id="idInput6" value="{}"/>
+</VBox>
+<beginButton>
+<Button id="idbutton1" text="Create" type="Transparent" press="onCreate"></Button>
+</beginButton>
+
+ 
+<endButton>
+<Button id="idbutton2" text="Cancel" type="Transparent" press="onCancel"></Button>
+</endButton>
+</Dialog>
+ 
+ 
+</core:FragmentDefinition>
+ 
+ 

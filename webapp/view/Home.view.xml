@@ -1,0 +1,152 @@
+<mvc:View
+    controllerName="com.app.project2.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns="sap.m"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table
+                id="idTable"
+                items="{/Products}"
+                mode="SingleSelectLeft"
+            >
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar1">
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                        <Button
+                            id="_IDGenButton1"
+                            class="sapUiSmallMarginBeginEnd"
+                            type="Transparent"
+                            icon="sap-icon://delete"
+                            text="Delete"
+                            press="onDelete"
+                        />
+                        <Button
+                            id="_IDGenButton2"
+                            class="sapUiSmallMarginBeginEnd"
+                            type="Transparent"
+                            icon="sap-icon://add"
+                            text="Add"
+                            press="onAdd"
+                        />
+                        <Button
+                            id="_IDGenButton3"
+                            class="sapUiSmallMarginBeginEnd"
+                            type="Transparent"
+                            icon="sap-icon://sort"
+                            text="Sorter"
+                            press="onSorter"
+                        />
+                        <Text
+                            id="rowCount"
+                            text="Count:"
+                        />
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column id="idforcolumn">
+                        <Title
+                            id="idid"
+                            text="ID"
+                        />
+                    </Column>
+                    <Column id="NameforColumn">
+                        <Title
+                            id="_IDGenTitle1"
+                            text="Name"
+                        />
+                    </Column>
+                    <Column id="idkdkd">
+                        <Title
+                            id="_IDGenTitle2"
+                            text="Description"
+                        />
+                    </Column>
+                    <Column id="titleforcolumn">
+                        <Title
+                            id="title"
+                            text="ReleaseDate"
+                        />
+                    </Column>
+                    <Column id="summaryforcolumn">
+                        <Title
+                            id="summary"
+                            text="Rating"
+                        />
+                    </Column>
+                    <Column
+                        id="DiscontinuedDate"
+                        visible="false"
+                    >
+                        <Title
+                            id="idDiscontinuedDate"
+                            text="DiscontinuedDate"
+                        />
+                    </Column>
+                    <Column id="idPrice">
+                        <Title
+                            id="idd"
+                            text="Price"
+                        />
+                    </Column>
+                    <Column id="idActions">
+                        <Text
+                            id="idText"
+                            text="Actions"
+                        />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="idcollist">
+                        <cells>
+                            <Text
+                                id="idval"
+                                text="{ID}"
+                            />
+                            <Text
+                                id="_IDGenText1"
+                                text="{Name}"
+                            />
+                            <Text
+                                id="idkkkds"
+                                text="{Description}"
+                            />
+                            <Text
+                                id="titleval"
+                                text="{ReleaseDate}"
+                            />
+                            <Input
+                                id="summaryval"
+                                value="{Rating}"
+                                editable="false"
+                            />
+                            <Text
+                                id="Discounval"
+                                text="{DiscontinuedDate}"
+                            />
+                            <Input
+                                id="priceval"
+                                value="{Price}"
+                                editable="false"
+                            />
+
+                            <Button
+                                id="idbuttonactions"
+                                text="Edit"
+                                press="onEdit1"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
